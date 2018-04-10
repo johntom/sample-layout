@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sample Layout Github</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="http://frontendcreator.com/favicon.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.default.min.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.bootstrap.min.css">
+  </head>
+  <body aurelia-app="src/main">
+    <h1>Loading...</h1>
+    
+    <script src="https://mattduffield.github.io/rjs-bundle/node_modules/requirejs/require.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/config.js"></script>
+    <script>
+      require.config({
+        paths: {
+          "jquery": "https://code.jquery.com/jquery-3.2.1.min",
+          "bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min",
+          // "aurelia-fetch-client": "https://mattduffield.github.io/rjs-bundle/node_modules/aurelia-fetch-client/dist/amd/aurelia-fetch-client"
+          "kendo.all.min": "https://fec.blob.core.windows.net/bundles/kendo-ui/2017.2.621/kendoui-javascript",
+          "aurelia-kendoui-bridge": "https://fec.blob.core.windows.net/bundles/kendo-ui/2017.2.621/aurelia-kendoui-bridge"          
+        },
+        shim: {
+          'bootstrap': ['jquery']
+        }
+      })
+    </script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/aurelia.js"></script>
+    <script src="https://mattduffield.github.io/rjs-bundle/bundles/babel.js"></script>
+    <script>
+      require(['aurelia-bootstrapper']);
+    </script>
+  </body>
+</html>
